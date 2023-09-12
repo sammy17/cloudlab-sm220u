@@ -36,10 +36,10 @@ def create_request(request, role, ip, worker_num=None):
     req = request.RawPC(name)
     if role == 'm':
         req.routable_control_ip = True
-        req.hardware_type = 'sm110p'
+        req.hardware_type = 'sm220u'
     elif role == 's':
         req.routable_control_ip = params.publicIPSlaves
-        req.hardware_type = 'sm110p'
+        req.hardware_type = 'sm220u'
     req.disk_image = params.osImage
     req.addService(pg.Execute(
         'bash',
